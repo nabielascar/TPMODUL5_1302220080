@@ -1,10 +1,29 @@
-﻿namespace TPMODUL5_1302220080
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TPMODUL5_1302220080
 {
-    internal class Program
+    public class HaloGeneric
+    {
+        public void SapaUser<T>(T userName)
+        {
+            Console.WriteLine($"Halo user {userName}");
+        }
+    }
+
+    class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            HaloGeneric halo = new HaloGeneric();
+
+
+            string namaPanggilan = "Ascar";
+            halo.SapaUser(namaPanggilan);
+            Console.Read();
         }
     }
 }
